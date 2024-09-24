@@ -7,6 +7,7 @@ import (
 	"github.com/joho/godotenv"
 
 	bot "github.com/njh18/tcg-tracker-discord-bot/bot"
+	webscraper "github.com/njh18/tcg-tracker-discord-bot/web-scraper"
 )
 
 func main() {
@@ -16,5 +17,7 @@ func main() {
 	}
 
 	bot.BotToken = os.Getenv("BOT_TOKEN")
-	bot.Run() // call the run function of bot/bot.go
+	// bot.Run()
+
+	webscraper.Main()
 }
